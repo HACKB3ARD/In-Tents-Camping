@@ -33,7 +33,6 @@ mongoose.connect(dbUrl, {
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", () => {
-    console.log("Database connected");
 });
 
 const app = express();
@@ -57,7 +56,6 @@ const store = new MongoDBStore({
 });
 
 store.on("error", function (e) {
-    console.log("SESSION STORE ERROR", e)
 })
 
 const sessionConfig = {
@@ -160,6 +158,4 @@ app.use((err, req, res, next) => {
 })
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log(`Serving on port ${port}`)
-})
+app.listen(port);

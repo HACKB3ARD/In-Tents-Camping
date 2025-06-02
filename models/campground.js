@@ -3,7 +3,7 @@ const Review = require('./review')
 const Schema = mongoose.Schema;
 
 
-// https://res.cloudinary.com/douqbebwk/image/upload/w_300/v1600113904/YelpCamp/gxgle1ovzd2f3dgcpass.png
+// https://res.cloudinary.com/douqbebwk/image/upload/w_300/v1600113904/In-Tents-Camping/gxgle1ovzd2f3dgcpass.png
 
 const ImageSchema = new Schema({
     url: String,
